@@ -13,3 +13,5 @@
 \\qut.edu.au\Documents\StaffHome\StaffGroupR$\roggenka\Desktop\CAB201 S2 2015\Class assignment skeleton\HareAndTortoise\Board Class Library\obj\Debug\Board Class Library.csprojResolveAssemblyReference.cache
 \\qut.edu.au\Documents\StaffHome\StaffGroupR$\roggenka\Desktop\CAB201 S2 2015\Class assignment skeleton\HareAndTortoise\Board Class Library\obj\Debug\Board Class Library.dll
 \\qut.edu.au\Documents\StaffHome\StaffGroupR$\roggenka\Desktop\CAB201 S2 2015\Class assignment skeleton\HareAndTortoise\Board Class Library\obj\Debug\Board Class Library.pdb
+D:\CAB201\Assignments\HareAndTortoise\Board Class Library\obj\Debug\Board Class Library.csprojResolveAssemblyReference.cache
+D:\CAB201\Assignments\HareAndTortoise\Board Class Library\obj\Debug\Board Class Library.dll

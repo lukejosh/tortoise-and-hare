@@ -3,3 +3,6 @@
 \\staffhome.qut.edu.au\staffgroupr$\roggenka\Desktop\CAB201 S2 2015\Class assignment sandpit\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.dll
 \\staffhome.qut.edu.au\staffgroupr$\roggenka\Desktop\CAB201 S2 2015\Class assignment sandpit\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.pdb
 \\staffhome.qut.edu.au\staffgroupr$\roggenka\Desktop\CAB201 S2 2015\Class assignment sandpit\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.csprojResolveAssemblyReference.cache
+D:\CAB201\Assignments\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.csprojResolveAssemblyReference.cache
+D:\CAB201\Assignments\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.dll
+D:\CAB201\Assignments\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.pdb
