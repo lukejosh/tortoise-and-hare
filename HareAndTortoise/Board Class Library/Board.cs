@@ -8,14 +8,14 @@ using Square_Class_Library;
 namespace Board_Class_Library {
 
     public static class Board {
-        const int NUMBER_OF_SQUARES = 56;
-        const int START_SQUARE = 0;
-        const int FINISH_SQUARE = 55;
-        const int PLAYING_SQUARES = 54;
+        public const int NUMBER_OF_SQUARES = 56;
+        public const int START_SQUARE = 0;
+        public const int FINISH_SQUARE = 55;
+        public const int PLAYING_SQUARES = 54;
 
         private static Square[] gameBoard = new Square[NUMBER_OF_SQUARES];
 
-        public static void SetUPBoard() {
+        public static void SetUpBoard() {
             for (int i = 1; i <= PLAYING_SQUARES; i++)
             {
                 if (i % 10 == 0)
@@ -38,8 +38,8 @@ namespace Board_Class_Library {
                 }
             }
 
-            gameBoard[START_SQUARE] = new Square("0", 0);
-            gameBoard[FINISH_SQUARE] = new Square("0", 0);
+            gameBoard[START_SQUARE] = new Square("Start", START_SQUARE);
+            gameBoard[FINISH_SQUARE] = new Square("Finish", FINISH_SQUARE);
         }
 
         public static Square GetGameBoardSquare(int number)

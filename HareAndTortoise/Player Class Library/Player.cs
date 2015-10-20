@@ -10,8 +10,8 @@ namespace Player_Class_Library {
     public class Player {
         private string name;
         private Square location;
-        private Image playerTokenImage;
-        private Brush playerTokenColour;
+        private Image PlayerTokenImage;
+        private Brush PlayerTokenColour;
 
         public Player()
         {
@@ -41,25 +41,25 @@ namespace Player_Class_Library {
 
         public Square GetLocation()
         {
-            return location
+            return location;
         }
 
         public Image GetPlayerTokenImage()
         {
-            return playerTokenImage;
+            return PlayerTokenImage;
         }
 
         public Brush GetPlayerTokenColour()
         {
-            return playerTokenColour;
+            return PlayerTokenColour;
         }
 
         public void SetPlayerTokenColour(Brush value){
-            playerTokenColour = value;
-            playerTokenImage = new Bitmap(1, 1);
-            using(Graphics g = Graphics.FromImage(playerTokenImage))
+            PlayerTokenColour = value;
+            PlayerTokenImage = new Bitmap(1, 1);
+            using(Graphics g = Graphics.FromImage(PlayerTokenImage))
             {
-                g.FillRectangle(playerTokenColour, 0, 0, 1, 1);
+                g.FillRectangle(PlayerTokenColour, 0, 0, 1, 1);
             }
         }
 

@@ -4,10 +4,13 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Board_Class_Library;
+using Player_Class_Library;
+
 
 namespace HareAndTortoise {
     public static class HareAndTortoise_Game {
-/*
+
         private static BindingList<Player> players = new BindingList<Player>();
         public static BindingList<Player> Players {
             get {
@@ -21,7 +24,7 @@ namespace HareAndTortoise {
  
             //more code to be added later
         }// end SetUpGame
-*/
+
 
         // MORE METHODS TO BE ADDED HERE LATER
         
