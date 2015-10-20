@@ -35,6 +35,9 @@ namespace HareAndTortoise {
                     current_squarecontrol.BackColor = Color.BurlyWood;
                 }
 
+                int row, column;
+                MapSquareToTable(i, out row, out column);
+                gameBoardPanel.Controls.Add(current_squarecontrol, column, row);
             }
         }
 
@@ -46,10 +49,17 @@ namespace HareAndTortoise {
                 column = 0;
             }
             else{
-                double rowcalc = (double)number / 6.0;
-                row = 7 - (int)Math.Floor(rowcalc);
-                column = 
+                row = 7 - (int)Math.Floor((double)number / 7.0);
+
+                if (row % 2 == 0)
+                {
+                    column = 6 - number % 7;
                 }
+                else
+                {
+                    column = number % 7;
+            }
+
         }
         
         // for each square that is on the game board 
@@ -75,6 +85,11 @@ namespace HareAndTortoise {
             int increaseInWidth = desiredWidth - currentWidth;
             this.Size += new Size(increaseInWidth, increaseInHeight);
             gameBoardPanel.Size = new Size(desiredWidth, desiredHeight);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         } //end ResizeGameBoard
  
 

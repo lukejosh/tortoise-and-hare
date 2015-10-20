@@ -61,3 +61,18 @@ C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\HareAnd
 C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\Square Class Library.pdb
 C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\Board Class Library.dll
 C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\Board Class Library.pdb
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\HareAndTortoise.exe.config
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\obj\Debug\HareAndTortoise.exe
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\obj\Debug\HareAndTortoise.pdb
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\HareAndTortoise.exe
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\HareAndTortoise.pdb
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\Board Class Library.dll
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\Player Class Library.dll
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\Square Class Library.dll
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\Board Class Library.pdb
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\Player Class Library.pdb
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\Square Class Library.pdb
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\obj\Debug\HareAndTortoise.csprojResolveAssemblyReference.cache
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\obj\Debug\HareAndTortoise.HareAndTortoise_Form.resources
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\obj\Debug\HareAndTortoise.Properties.Resources.resources
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\obj\Debug\HareAndTortoise.csproj.GenerateResource.Cache

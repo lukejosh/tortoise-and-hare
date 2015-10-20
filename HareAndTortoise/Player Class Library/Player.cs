@@ -8,10 +8,13 @@ using Square_Class_Library;
 
 namespace Player_Class_Library {
     public class Player {
+        private Image playerTokenImage;
+        private Brush playerTokenColour;
         private string name;
+        private int money;
+        private bool hasWon;
         private Square location;
-        private Image PlayerTokenImage;
-        private Brush PlayerTokenColour;
+
 
         public Player()
         {
@@ -24,42 +27,84 @@ namespace Player_Class_Library {
             location = square;
         }
 
-        public void SetName(string a_name)
+        public int Money
         {
-            name = a_name;
+            set
+            {
+                money = value;
+            }
+            get
+            {
+                return money;
+            }
         }
 
-        public string GetName()
+        public bool HasWon
         {
-            return name;
+            set
+            {
+                hasWon = value;
+            }
+            get
+            {
+                return hasWon;
+            }
         }
 
-        public void SetLocation(Square a_square)
+        public string Name
         {
-            location = a_square;
+            set
+            {
+                name = value;
+            }
+            get
+            {
+                return name;
+            }
         }
 
-        public Square GetLocation()
+        public Square Location
         {
-            return location;
+            set
+            {
+                location = value;
+            }
+            get
+            {
+                return location;
+            }
         }
 
-        public Image GetPlayerTokenImage()
+        public Image PlayerTokenImage
         {
-            return PlayerTokenImage;
+            set
+            {
+                playerTokenImage = value;
+            }
+            get
+            {
+                return playerTokenImage;
+            }
         }
 
-        public Brush GetPlayerTokenColour()
+        public Brush PlayerTokenColour
         {
-            return PlayerTokenColour;
+            set
+            {
+                playerTokenColour = value;
+            }
+            get
+            {
+                return playerTokenColour;
+            }
         }
 
         public void SetPlayerTokenColour(Brush value){
-            PlayerTokenColour = value;
-            PlayerTokenImage = new Bitmap(1, 1);
-            using(Graphics g = Graphics.FromImage(PlayerTokenImage))
+            playerTokenColour = value;
+            playerTokenImage = new Bitmap(1, 1);
+            using(Graphics g = Graphics.FromImage(playerTokenImage))
             {
-                g.FillRectangle(PlayerTokenColour, 0, 0, 1, 1);
+                g.FillRectangle(playerTokenColour, 0, 0, 1, 1);
             }
         }
 
