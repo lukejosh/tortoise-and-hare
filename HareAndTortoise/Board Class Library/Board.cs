@@ -37,12 +37,36 @@ namespace Board_Class_Library {
                     gameBoard[i] = new Square(i.ToString(), i);
                 }
             }
+
+            gameBoard[START_SQUARE] = new Square("0", 0);
+            gameBoard[FINISH_SQUARE] = new Square("0", 0);
         }
 
-        //public static Square GetGameBoardSquare(int number)
-        //{
-            //return 0;
-        //}
+        public static Square GetGameBoardSquare(int number)
+        {
+            if (number > FINISH_SQUARE || number < START_SQUARE)
+            {
+                throw new System.IndexOutOfRangeException();
+            }
+            return gameBoard[number];
+        }
+
+        public static Square StartSquare()
+        {
+            return gameBoard[START_SQUARE];
+        }
+
+        public static Square NextSquare(int number)
+        {
+            if (number > FINISH_SQUARE || number < START_SQUARE)
+            {
+                throw new System.IndexOutOfRangeException();
+            }
+
+            return gameBoard[number];
+
+        }
+
 
     }
 }
