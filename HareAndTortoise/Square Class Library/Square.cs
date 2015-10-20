@@ -14,7 +14,7 @@ namespace Square_Class_Library
 
         public Square()
         {
-
+            throw new ArgumentException();
         }
 
         public Square(string name_in, int number_in) //Exception
