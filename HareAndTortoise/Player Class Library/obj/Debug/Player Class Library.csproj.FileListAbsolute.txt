@@ -13,3 +13,8 @@ D:\CAB201\Assignments\HareAndTortoise\Player Class Library\bin\Debug\Player Clas
 D:\CAB201\Assignments\HareAndTortoise\Player Class Library\obj\Debug\Player Class Library.csprojResolveAssemblyReference.cache
 D:\CAB201\Assignments\HareAndTortoise\Player Class Library\obj\Debug\Player Class Library.dll
 D:\CAB201\Assignments\HareAndTortoise\Player Class Library\obj\Debug\Player Class Library.pdb
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Player Class Library\bin\Debug\Player Class Library.dll
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Player Class Library\bin\Debug\Player Class Library.pdb
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Player Class Library\obj\Debug\Player Class Library.csprojResolveAssemblyReference.cache
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Player Class Library\obj\Debug\Player Class Library.dll
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Player Class Library\obj\Debug\Player Class Library.pdb

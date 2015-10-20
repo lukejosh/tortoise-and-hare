@@ -15,3 +15,10 @@
 \\qut.edu.au\Documents\StaffHome\StaffGroupR$\roggenka\Desktop\CAB201 S2 2015\Class assignment skeleton\HareAndTortoise\Board Class Library\obj\Debug\Board Class Library.pdb
 D:\CAB201\Assignments\HareAndTortoise\Board Class Library\obj\Debug\Board Class Library.csprojResolveAssemblyReference.cache
 D:\CAB201\Assignments\HareAndTortoise\Board Class Library\obj\Debug\Board Class Library.dll
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Board Class Library\obj\Debug\Board Class Library.csprojResolveAssemblyReference.cache
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Board Class Library\obj\Debug\Board Class Library.dll
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Board Class Library\bin\Debug\Board Class Library.dll
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Board Class Library\bin\Debug\Board Class Library.pdb
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Board Class Library\bin\Debug\Square Class Library.dll
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Board Class Library\bin\Debug\Square Class Library.pdb
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Board Class Library\obj\Debug\Board Class Library.pdb

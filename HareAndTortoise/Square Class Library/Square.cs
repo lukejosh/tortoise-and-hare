@@ -4,37 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Square_Class_Library {
-   
-    public class Square {
+namespace Square_Class_Library
+{
+
+    public class Square
+    {
         private string name;
         private int number;
 
-        public Square() //constructer to throw ArgumentException
+        public Square()
         {
 
         }
 
-        public void Square(string name, int number)
+        public Square(string name_in, int number_in) //Exception
         {
-
+            name = name_in;
+            number = number_in;
         }
 
         public string GetName()
         {
-            string laskdjas = " ";
-            return laskdjas;
+            return name;
         }
 
         public int GetNumber()
         {
-            return 0;
+            return number;
         }
     }
 
     public class Win_Square : Square
     {
-        public Win_Square(string name, int number) // constructor or method? -> not constructors
+        public Win_Square(string name, int number):
+            base(name, number)// constructor or method? -> not constructors
         {
 
         }
@@ -42,7 +45,8 @@ namespace Square_Class_Library {
 
     public class Lose_Square : Square
     {
-        public Lose_Square(string name, int number)
+        public Lose_Square(string name, int number):
+            base(name, number)
         {
 
         }
@@ -50,7 +54,8 @@ namespace Square_Class_Library {
 
     public class Chance_Square : Square
     {
-        public Chance_Square(string name, int number)
+        public Chance_Square(string name, int number):
+            base(name, number)
         {
 
         }

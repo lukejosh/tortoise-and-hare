@@ -6,3 +6,8 @@
 D:\CAB201\Assignments\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.csprojResolveAssemblyReference.cache
 D:\CAB201\Assignments\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.dll
 D:\CAB201\Assignments\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.pdb
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.csprojResolveAssemblyReference.cache
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.dll
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Square Class Library\obj\Debug\Square Class Library.pdb
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Square Class Library\bin\Debug\Square Class Library.dll
+C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Square Class Library\bin\Debug\Square Class Library.pdb

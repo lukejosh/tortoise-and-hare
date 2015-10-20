@@ -20,19 +20,29 @@ namespace Board_Class_Library {
             {
                 if (i % 10 == 0)
                 {
-                    //Lose
+                    gameBoard[i] = new Win_Square(i.ToString(), i);
                 }
                 else if (i % 5 == 0)
                 {
-                    //Win
+                    gameBoard[i] = new Lose_Square(i.ToString(), i);
+                }
+
+                else if (i % 6 == 0)
+                {
+                    gameBoard[i] = new Chance_Square(i.ToString(), i);
+                }
+
+                else
+                {
+                    gameBoard[i] = new Square(i.ToString(), i);
                 }
             }
         }
 
-        public static Square GetGameBoardSquare(int number)
-        {
-            return 0;
-        }
+        //public static Square GetGameBoardSquare(int number)
+        //{
+            //return 0;
+        //}
 
     }
 }
