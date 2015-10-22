@@ -29,8 +29,6 @@ namespace HareAndTortoise {
                 containsPlayers = value;
             }
         }
-        
-       
 
         // Font and brush for displaying text inside the square.
         private Font textFont = new Font("Microsoft Sans Serif", 8);
