@@ -45,6 +45,16 @@
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Die Class Library\Die Class Library.csproj">
+      <Project>{3f34eea0-8e30-47fe-9148-d026f44aefe4}</Project>
+      <Name>Die Class Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Player Class Library\Player Class Library.csproj">
+      <Project>{245b107d-4ee5-48a6-917e-38561fdb0cd9}</Project>
+      <Name>Player Class Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

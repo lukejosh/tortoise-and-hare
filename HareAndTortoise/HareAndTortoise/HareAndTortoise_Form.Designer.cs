@@ -27,11 +27,6 @@
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.gameBoardPanel = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.playerTokenImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hasWonDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.playerBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.Reset = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
@@ -40,11 +35,16 @@
             this.NumberOfPlayers = new System.Windows.Forms.ComboBox();
             this.Players = new System.Windows.Forms.Label();
             this.HareAndTortoise = new System.Windows.Forms.Label();
+            this.playerBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.playerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.playerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.playerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.hareAndTortoiseGameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.playerTokenImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hasWonDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -127,39 +127,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(199, 172);
             this.dataGridView1.TabIndex = 9;
-            // 
-            // playerTokenImageDataGridViewImageColumn
-            // 
-            this.playerTokenImageDataGridViewImageColumn.DataPropertyName = "PlayerTokenImage";
-            this.playerTokenImageDataGridViewImageColumn.HeaderText = "Colour";
-            this.playerTokenImageDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.playerTokenImageDataGridViewImageColumn.Name = "playerTokenImageDataGridViewImageColumn";
-            this.playerTokenImageDataGridViewImageColumn.Width = 40;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // moneyDataGridViewTextBoxColumn
-            // 
-            this.moneyDataGridViewTextBoxColumn.DataPropertyName = "Money";
-            this.moneyDataGridViewTextBoxColumn.HeaderText = "$";
-            this.moneyDataGridViewTextBoxColumn.Name = "moneyDataGridViewTextBoxColumn";
-            this.moneyDataGridViewTextBoxColumn.Width = 30;
-            // 
-            // hasWonDataGridViewCheckBoxColumn
-            // 
-            this.hasWonDataGridViewCheckBoxColumn.DataPropertyName = "HasWon";
-            this.hasWonDataGridViewCheckBoxColumn.HeaderText = "Winner";
-            this.hasWonDataGridViewCheckBoxColumn.Name = "hasWonDataGridViewCheckBoxColumn";
-            this.hasWonDataGridViewCheckBoxColumn.Width = 50;
-            // 
-            // playerBindingSource4
-            // 
-            this.playerBindingSource4.DataSource = typeof(Player_Class_Library.Player);
             // 
             // label1
             // 
@@ -250,6 +217,10 @@
             this.HareAndTortoise.TabIndex = 0;
             this.HareAndTortoise.Text = "Hare and Tortoise";
             // 
+            // playerBindingSource4
+            // 
+            this.playerBindingSource4.DataSource = typeof(Player_Class_Library.Player);
+            // 
             // playerBindingSource3
             // 
             this.playerBindingSource3.DataSource = typeof(Player_Class_Library.Player);
@@ -269,6 +240,38 @@
             // hareAndTortoiseGameBindingSource
             // 
             this.hareAndTortoiseGameBindingSource.DataSource = typeof(HareAndTortoise.HareAndTortoise_Game);
+            // 
+            // playerTokenImageDataGridViewImageColumn
+            // 
+            this.playerTokenImageDataGridViewImageColumn.DataPropertyName = "PlayerTokenImage";
+            this.playerTokenImageDataGridViewImageColumn.HeaderText = "Colour";
+            this.playerTokenImageDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.playerTokenImageDataGridViewImageColumn.Name = "playerTokenImageDataGridViewImageColumn";
+            this.playerTokenImageDataGridViewImageColumn.ReadOnly = true;
+            this.playerTokenImageDataGridViewImageColumn.Width = 40;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // moneyDataGridViewTextBoxColumn
+            // 
+            this.moneyDataGridViewTextBoxColumn.DataPropertyName = "Money";
+            this.moneyDataGridViewTextBoxColumn.HeaderText = "$";
+            this.moneyDataGridViewTextBoxColumn.Name = "moneyDataGridViewTextBoxColumn";
+            this.moneyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.moneyDataGridViewTextBoxColumn.Width = 30;
+            // 
+            // hasWonDataGridViewCheckBoxColumn
+            // 
+            this.hasWonDataGridViewCheckBoxColumn.DataPropertyName = "HasWon";
+            this.hasWonDataGridViewCheckBoxColumn.HeaderText = "Winner";
+            this.hasWonDataGridViewCheckBoxColumn.Name = "hasWonDataGridViewCheckBoxColumn";
+            this.hasWonDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.hasWonDataGridViewCheckBoxColumn.Width = 50;
             // 
             // HareAndTortoise_Form
             // 

@@ -88,6 +88,10 @@
       <Project>{dab18cd4-8792-41c5-b03e-b0386211c58a}</Project>
       <Name>Board Class Library</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Die Class Library\Die Class Library.csproj">
+      <Project>{3f34eea0-8e30-47fe-9148-d026f44aefe4}</Project>
+      <Name>Die Class Library</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Player Class Library\Player Class Library.csproj">
       <Project>{245b107d-4ee5-48a6-917e-38561fdb0cd9}</Project>
       <Name>Player Class Library</Name>

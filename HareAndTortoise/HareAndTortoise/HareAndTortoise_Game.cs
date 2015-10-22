@@ -8,6 +8,7 @@ using System.Drawing;
 using Board_Class_Library;
 using Player_Class_Library;
 using Square_Class_Library;
+using Die_Class_Library;
 
 
 namespace HareAndTortoise {
@@ -26,18 +27,55 @@ namespace HareAndTortoise {
         public static void initialisePlayers()
         {
             for (int i = 0; i < numberOfPlayers; i++){
-                Player new_player = new Player(PlayerNames[i], Board.StartSquare());
+                Player new_player = new Player(PlayerNames[i], Board.StartSquare(), 100);
                 new_player.SetPlayerTokenColour(PlayerColours[i]);
                 Players.Add(new_player);
             }
         }
 
-        public static void MovePlayers()
+        public static void EndGame()
         {
+            bool[] cur_highest = new bool[6] { false, false, false, false, false, false };
+            int most_money = 0;
             for (int i = 0; i < numberOfPlayers; i++)
             {
-                int a_roll = players[i].RollTwoDice();
-                players[i].Location = new Square(players[i].Location.GetName(), players[i].Location.GetNumber() + a_roll); //if the CRA requires this, this is a bad subject and you should feel bad.
+                if (players[i].Money > most_money)
+                {
+                    most_money = players[i].Money;
+                }
+
+            }
+
+            for (int i = 0; i < numberOfPlayers; i++)
+            {
+                if (players[i].Money == most_money)
+                {
+                    cur_highest[i] = true;
+                }
+            }
+            if (cur_highest.Where(c => c).Count() == 1)
+            {
+
+            }
+        }
+
+        public static void MovePlayers()
+        {
+            int count = 0;
+            for (int i = 0; i < numberOfPlayers; i++)
+            {
+                Die die1 = new Die(6);
+                Die die2 = new Die(6);
+
+                players[i].RollTwoDice(die1, die2, players[i]);
+                if (players[i].Location.GetNumber() == Board.FINISH_SQUARE)
+                {
+                    count++;
+                }
+            }
+            if (count != 0)
+            {
+                EndGame();
             }
 
         }

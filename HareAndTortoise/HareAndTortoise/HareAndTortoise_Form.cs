@@ -102,6 +102,11 @@ namespace HareAndTortoise {
             gameBoardPanel.Size = new Size(desiredWidth, desiredHeight);
         }
 
+        private void UpdateDataGridView()
+        {
+            HareAndTortoise_Game.Players.ResetBindings();
+        }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -117,6 +122,7 @@ namespace HareAndTortoise {
             updateSquare(false);
             HareAndTortoise_Game.MovePlayers();
             updateSquare();
+            UpdateDataGridView();
         } //end ResizeGameBoard
  
 
