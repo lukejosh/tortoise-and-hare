@@ -24,6 +24,7 @@ namespace HareAndTortoise {
             SetUpGuiGameBoard();
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.DataSource = HareAndTortoise_Game.Players;
+            updateSquare();
         }
 
 
@@ -75,15 +76,17 @@ namespace HareAndTortoise {
         
         }//end SetUpGuiGameBoard()
 
-        private void updateSquare()
+        private void updateSquare(bool update = true)
         {
             for (int i = 0; i < HareAndTortoise_Game.numberOfPlayers; i++)
             {
                 int current_location = HareAndTortoise_Game.Players[i].Location.GetNumber();
                 int row, column;
                 MapSquareToTable(current_location, out row, out column);
-                gameBoardPanel.GetControlFromPosition(column, row);
+                SquareControl square = (SquareControl)gameBoardPanel.GetControlFromPosition(column, row);
+                square.ContainsPlayers[i] = update;
             }
+            gameBoardPanel.Invalidate(true);
 
         }
 
@@ -107,6 +110,13 @@ namespace HareAndTortoise {
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void RollDice_Click(object sender, EventArgs e)
+        {
+            updateSquare(false);
+            HareAndTortoise_Game.MovePlayers();
+            updateSquare();
         } //end ResizeGameBoard
  
 

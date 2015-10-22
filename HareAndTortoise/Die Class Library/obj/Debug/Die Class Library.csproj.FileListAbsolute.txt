@@ -18,3 +18,8 @@ C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Die Cla
 C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Die Class Library\obj\Debug\Die Class Library.csprojResolveAssemblyReference.cache
 C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Die Class Library\obj\Debug\Die Class Library.dll
 C:\Users\Luke\Code\C#\CAB201\Assesment\tortoise-and-hare\HareAndTortoise\Die Class Library\obj\Debug\Die Class Library.pdb
+H:\tortoise-and-hare\HareAndTortoise\Die Class Library\bin\Debug\Die Class Library.dll
+H:\tortoise-and-hare\HareAndTortoise\Die Class Library\bin\Debug\Die Class Library.pdb
+H:\tortoise-and-hare\HareAndTortoise\Die Class Library\obj\Debug\Die Class Library.csprojResolveAssemblyReference.cache
+H:\tortoise-and-hare\HareAndTortoise\Die Class Library\obj\Debug\Die Class Library.dll
+H:\tortoise-and-hare\HareAndTortoise\Die Class Library\obj\Debug\Die Class Library.pdb

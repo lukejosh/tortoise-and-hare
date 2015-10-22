@@ -76,3 +76,5 @@ H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\obj\Debug\HareAndTortoise.c
 H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\obj\Debug\HareAndTortoise.HareAndTortoise_Form.resources
 H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\obj\Debug\HareAndTortoise.Properties.Resources.resources
 H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\obj\Debug\HareAndTortoise.csproj.GenerateResource.Cache
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\Die Class Library.dll
+H:\tortoise-and-hare\HareAndTortoise\HareAndTortoise\bin\Debug\Die Class Library.pdb

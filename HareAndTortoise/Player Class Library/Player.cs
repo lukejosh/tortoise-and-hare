@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using Square_Class_Library;
+using Die_Class_Library;
 
 namespace Player_Class_Library {
     public class Player {
@@ -14,6 +15,8 @@ namespace Player_Class_Library {
         private int money;
         private bool hasWon;
         private Square location;
+
+        public int MAX_PLAYERS = 6;
 
 
         public Player()
@@ -97,6 +100,14 @@ namespace Player_Class_Library {
             {
                 return playerTokenColour;
             }
+        }
+
+        public int RollTwoDice()
+        {
+            Die a_dice = new Die(6);
+            int a_roll = a_dice.Roll();
+            a_roll += a_dice.Roll();
+            return a_roll;
         }
 
         public void SetPlayerTokenColour(Brush value){

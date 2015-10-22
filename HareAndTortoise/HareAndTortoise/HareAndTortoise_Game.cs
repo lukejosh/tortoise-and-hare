@@ -32,6 +32,16 @@ namespace HareAndTortoise {
             }
         }
 
+        public static void MovePlayers()
+        {
+            for (int i = 0; i < numberOfPlayers; i++)
+            {
+                int a_roll = players[i].RollTwoDice();
+                players[i].Location = new Square(players[i].Location.GetName(), players[i].Location.GetNumber() + a_roll); //if the CRA requires this, this is a bad subject and you should feel bad.
+            }
+
+        }
+
         public static void SetUpGame()
         {
 
