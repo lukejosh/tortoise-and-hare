@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Board_Class_Library;
 using Player_Class_Library;
 using Square_Class_Library;
+using Die_Class_Library;
 
 namespace HareAndTortoise {
     public partial class HareAndTortoise_Form : Form {
@@ -110,6 +111,37 @@ namespace HareAndTortoise {
             HareAndTortoise_Game.Players.ResetBindings();
         }
 
+        private void DiceClick(int number_players)
+        {
+            int count = 0;
+            Die d1 = new Die();
+            Die d2 = new Die();
+
+            for (int i = 0; i < number_players; i++)
+            {
+                int move = d1.Roll() + d2.Roll();
+                for (int j = 0; j < move; j++)
+                {
+                    updateSquare(false, current_selected_number);
+                    HareAndTortoise_Game.Players[i].MoveOne(move, HareAndTortoise_Game.Players[i]);
+                    updateSquare(true, current_selected_number);
+                    HareAndTortoise_Game.Players[i].Location.EffectOnPlayer(HareAndTortoise_Game.Players[i]);
+                    if (HareAndTortoise_Game.Players[i].Location.GetNumber() == Board.FINISH_SQUARE)
+                    {
+                        count++;
+                    }
+
+                    if (count != 0)
+                    {
+                        HareAndTortoise_Game.EndGame(number_players);
+                        HareAndTortoise_Game.isOver = true;
+                    }
+                    Application.DoEvents();
+                    //Thread.Sleep(100);
+                }
+            }
+        }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -125,8 +157,9 @@ namespace HareAndTortoise {
             Reset.Enabled = false;
             RollDice.Enabled = false;
             NumberOfPlayers.Enabled = false;
-            updateSquare(false, current_selected_number);
-            HareAndTortoise_Game.MovePlayers(current_selected_number);
+            //updateSquare(false, current_selected_number);
+            //HareAndTortoise_Game.MovePlayers(current_selected_number);
+            DiceClick(current_selected_number);
             if (HareAndTortoise_Game.isOver)
             {
                 NumberOfPlayers.Enabled = true;
@@ -135,8 +168,9 @@ namespace HareAndTortoise {
             {
                 RollDice.Enabled = true;
             }
-            updateSquare(true, current_selected_number);
-            UpdateDataGridView();
+            //updateSquare(true, current_selected_number);
+            //UpdateDataGridView();
+
             Reset.Enabled = true;
         }
 

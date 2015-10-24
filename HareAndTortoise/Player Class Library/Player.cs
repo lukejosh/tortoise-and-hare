@@ -119,7 +119,21 @@ namespace Player_Class_Library {
 
         }
 
-        public void SetPlayerTokenColour(Brush value){
+        public void MoveOne(int move, Player who)
+        {
+            if (who.location.GetNumber() == WIN_SQUARE - 1)
+            {
+                who.location = Board_Class_Library.Board.GetGameBoardSquare(WIN_SQUARE);
+            }
+
+            else
+            {
+                who.location = Board_Class_Library.Board.GetGameBoardSquare(who.location.GetNumber() + 1);
+            }
+        }
+
+        public void SetPlayerTokenColour(Brush value)
+        {
             playerTokenColour = value;
             playerTokenImage = new Bitmap(1, 1);
             using(Graphics g = Graphics.FromImage(playerTokenImage))
