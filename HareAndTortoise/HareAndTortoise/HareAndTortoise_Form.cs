@@ -28,7 +28,9 @@ namespace HareAndTortoise {
             updateSquare();
         }
 
-
+        /// <summary>
+        /// Initialises the gameboard. Sets square objects as controls and initialises the combo box
+        /// </summary>
         private void SetUpGuiGameBoard() {
             for (int i = Board.START_SQUARE; i <= Board.FINISH_SQUARE; i++)
             {
@@ -47,6 +49,12 @@ namespace HareAndTortoise {
             }
         }
 
+        /// <summary>
+        /// Gets a squares row and column based on it's index
+        /// </summary>
+        /// <param name="number">The index</param>
+        /// <param name="row">The row</param>
+        /// <param name="column">The column</param>
         private static void MapSquareToTable(int number, out int row, out int column)
         {
             if(number == 0)
@@ -79,6 +87,11 @@ namespace HareAndTortoise {
         
         }//end SetUpGuiGameBoard()
 
+        /// <summary>
+        /// Gets a squares row and column, and draws the token on it's square
+        /// </summary>
+        /// <param name="update">Whether the token is on the square</param>
+        /// <param name="number_of_players">The chosen number of players from combo box</param>
         private void updateSquare(bool update = true, int number_of_players = HareAndTortoise_Game.numberOfPlayers)
         {
             for (int i = 0; i < number_of_players; i++)
@@ -105,6 +118,9 @@ namespace HareAndTortoise {
             gameBoardPanel.Size = new Size(desiredWidth, desiredHeight);
         }
 
+        /// <summary>
+        /// Updates the values in the data grid
+        /// </summary>
         private void UpdateDataGridView()
         {
             HareAndTortoise_Game.Players.ResetBindings();

@@ -35,12 +35,19 @@ namespace Square_Class_Library
             return number;
         }
 
+        /// <summary>
+        /// Applies the effect on the player based on what type of square it has landed in
+        /// </summary>
+        /// <param name="who">The player the effect is to be applied to</param>
         public virtual void EffectOnPlayer(Player who)
         {
 
         }
     }
 
+    /// <summary>
+    /// A particular "win" game square
+    /// </summary>
     public class Win_Square : Square
     {
         public Win_Square(string name, int number):
@@ -49,6 +56,10 @@ namespace Square_Class_Library
 
         }
 
+        /// <summary>
+        /// Adds 15 money and rerolls the player
+        /// </summary>
+        /// <param name="who">The player</param>
         public override void EffectOnPlayer(Player who)
         {
             who.Add(15);
@@ -56,6 +67,9 @@ namespace Square_Class_Library
         }
     }
 
+    /// <summary>
+    /// A particular "lose" game square
+    /// </summary>
     public class Lose_Square : Square
     {
         public Lose_Square(string name, int number):
@@ -64,6 +78,10 @@ namespace Square_Class_Library
 
         }
 
+        /// <summary>
+        /// Deducts 25 money and moves 3 spaces back
+        /// </summary>
+        /// <param name="who">The player</param>
         public override void EffectOnPlayer(Player who)
         {
             who.Deduct(25);
@@ -71,6 +89,9 @@ namespace Square_Class_Library
         }
     }
 
+    /// <summary>
+    /// A particular "chance" game square
+    /// </summary>
     public class Chance_Square : Square
     {
         public Chance_Square(string name, int number):
@@ -79,6 +100,10 @@ namespace Square_Class_Library
 
         }
 
+        /// <summary>
+        /// Moves forward 5 and adds 50, or moves back 5 and deducts 50
+        /// </summary>
+        /// <param name="who">The player</param>
         public override void EffectOnPlayer(Player who)
         {
             Die a_dice = new Die(2);

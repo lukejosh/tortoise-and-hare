@@ -104,6 +104,12 @@ namespace Player_Class_Library {
             }
         }
 
+        /// <summary>
+        /// Rolls two dice and sets the new location, and applies the effect of the new square to the player
+        /// </summary>
+        /// <param name="die1">A dice object</param>
+        /// <param name="die2">A dice object</param>
+        /// <param name="who">The player object to be moved</param>
         public void RollTwoDice(Die die1, Die die2, Player who)
         {
             int move = die1.Roll() + die2.Roll();
@@ -128,11 +134,19 @@ namespace Player_Class_Library {
             }
         }
 
+        /// <summary>
+        /// Add's an amount of money to the player object
+        /// </summary>
+        /// <param name="amount">The amount to be added</param>
         public void Add(int amount)
         {
             money += amount;
         }
 
+        /// <summary>
+        /// Deducts an amount of money from the player object
+        /// </summary>
+        /// <param name="amount">The amount to be deducted</param>
         public void Deduct(int amount)
         {
             if (money <= amount)
@@ -145,6 +159,10 @@ namespace Player_Class_Library {
             }
         }
 
+        /// <summary>
+        /// Rerolls the dice for a particular object
+        /// </summary>
+        /// <param name="who">The player to reroll the dice for</param>
         public void Reroll(Player who)
         {
             Die d1 = new Die();
@@ -152,6 +170,11 @@ namespace Player_Class_Library {
             RollTwoDice(d1, d2, who);
         }
 
+        /// <summary>
+        /// Move a specific player a number of squares
+        /// </summary>
+        /// <param name="who">The player to be moved</param>
+        /// <param name="n">The number of squares to be moved (may be negative)</param>
         public void Move(Player who, int n)
         {
             if (who.location.GetNumber() + n >= WIN_SQUARE)

@@ -15,6 +15,9 @@ namespace Board_Class_Library {
 
         private static Square[] gameBoard = new Square[NUMBER_OF_SQUARES];
 
+        /// <summary>
+        /// Adds squares to the gameboard, assigning their type based on location
+        /// </summary>
         public static void SetUpBoard() {
             for (int i = 1; i <= PLAYING_SQUARES; i++)
             {
@@ -42,6 +45,11 @@ namespace Board_Class_Library {
             gameBoard[FINISH_SQUARE] = new Square("Finish", FINISH_SQUARE);
         }
 
+        /// <summary>
+        /// Get's a square objects from the gameboard from it's index.
+        /// </summary>
+        /// <param name="number">the index required</param>
+        /// <returns>A square object</returns>
         public static Square GetGameBoardSquare(int number)
         {
             if (number > FINISH_SQUARE || number < START_SQUARE)
@@ -51,19 +59,28 @@ namespace Board_Class_Library {
             return gameBoard[number];
         }
 
+        /// <summary>
+        /// Get's the start square
+        /// </summary>
+        /// <returns>A square object</returns>
         public static Square StartSquare()
         {
             return gameBoard[START_SQUARE];
         }
 
+        /// <summary>
+        /// Get's the next square from an index
+        /// </summary>
+        /// <param name="number">The current index</param>
+        /// <returns>A square object</returns>
         public static Square NextSquare(int number)
         {
-            if (number > FINISH_SQUARE || number < START_SQUARE)
+            if (number + 1 > FINISH_SQUARE || number + 1 < START_SQUARE)
             {
                 throw new System.IndexOutOfRangeException();
             }
 
-            return gameBoard[number];
+            return gameBoard[number + 1];
 
         }
 
