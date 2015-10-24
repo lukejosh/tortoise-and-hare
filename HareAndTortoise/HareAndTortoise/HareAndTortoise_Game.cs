@@ -25,6 +25,10 @@ namespace HareAndTortoise {
             }
         }
 
+        /// <summary>
+        /// Adds the required number of players to the gameboard
+        /// </summary>
+        /// <param name="numberplayers">The number of players selected in the combo box</param>
         public static void initialisePlayers(int numberplayers = numberOfPlayers)
         {
             for (int i = 0; i < numberplayers; i++){
@@ -33,25 +37,29 @@ namespace HareAndTortoise {
                 Players.Add(new_player);
             }
         }
-
+        
+        /// <summary>
+        /// Determines which of the players has won.
+        /// </summary>
+        /// <param name="number_of_players">The number of players selected from the combo box</param>
         public static void EndGame(int number_of_players)
         {
             bool[] cur_highest = new bool[6] { false, false, false, false, false, false };
             int most_money = 0;
-            for (int i = 0; i < number_of_players; i++)
+            for (int i = 0; i < number_of_players; i++) //Loops through each of the players
             {
                 if (players[i].Money > most_money)
                 {
-                    most_money = players[i].Money;
+                    most_money = players[i].Money; //Determines what the highest amount of money is
                 }
 
             }
 
-            for (int i = 0; i < number_of_players; i++)
+            for (int i = 0; i < number_of_players; i++) //Loops through each of the players
             {
                 if (players[i].Money == most_money)
                 {
-                    cur_highest[i] = true;
+                    cur_highest[i] = true; //Sets to true if the player has the highest amount of money
                 }
             }
             if (cur_highest.Where(c => c).Count() == 1)
@@ -60,7 +68,7 @@ namespace HareAndTortoise {
                 {
                     if (cur_highest[i])
                     {
-                        players[i].HasWon = true;
+                        players[i].HasWon = true; //If one player has the highest amount, declare them the winner
                     }
                 }
             }
@@ -72,7 +80,7 @@ namespace HareAndTortoise {
                 {
                     if (players[i].Location.GetNumber() > greatest_distance && cur_highest[i])
                     {
-                        greatest_distance = players[i].Location.GetNumber();
+                        greatest_distance = players[i].Location.GetNumber(); //Determines the greatest distance moved between players with equal highest money
                     }
                 }
 
@@ -80,12 +88,16 @@ namespace HareAndTortoise {
                 {
                     if (players[i].Location.GetNumber() == greatest_distance)
                     {
-                        players[i].HasWon = true;
+                        players[i].HasWon = true; //If a player has the most money and has moved the furthest, declare them the winner.
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Generates dice, rolls for each player, moves, and checks for end of game
+        /// </summary>
+        /// <param name="number_players">Number of players from combo box</param>
         public static void MovePlayers(int number_players = numberOfPlayers)
         {
             int count = 0;
@@ -119,6 +131,10 @@ namespace HareAndTortoise {
             //more code to be added later
         }// end SetUpGame
 
+        /// <summary>
+        /// Resets the players to have inital location and money
+        /// </summary>
+        /// <param name="number">Number of players to reset, selected in combo box</param>
         public static void ResetPlayers(int number)
         {
             players.Clear();
@@ -126,10 +142,5 @@ namespace HareAndTortoise {
             isOver = false;
 
         }
-
-
-
-        // MORE METHODS TO BE ADDED HERE LATER
-        
-    }//end class
-}//end namespace
+    }
+}
