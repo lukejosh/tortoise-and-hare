@@ -116,6 +116,7 @@ namespace Player_Class_Library {
                 who.location = Board_Class_Library.Board.GetGameBoardSquare(who.Location.GetNumber() + move);
             }
             who.Location.EffectOnPlayer(who);
+
         }
 
         public void SetPlayerTokenColour(Brush value){
@@ -144,6 +145,25 @@ namespace Player_Class_Library {
             }
         }
 
+        public void Reroll(Player who)
+        {
+            Die d1 = new Die();
+            Die d2 = new Die();
+            RollTwoDice(d1, d2, who);
+        }
+
+        public void Move(Player who, int n)
+        {
+            if (who.location.GetNumber() + n >= WIN_SQUARE)
+            {
+                who.location = Board_Class_Library.Board.GetGameBoardSquare(WIN_SQUARE);
+            }
+            else
+            {
+                who.location = Board_Class_Library.Board.GetGameBoardSquare(who.location.GetNumber() + n);
+            }
+            who.Location.EffectOnPlayer(who);
+        }
     
     }
 }

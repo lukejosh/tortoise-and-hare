@@ -16,6 +16,7 @@ namespace HareAndTortoise {
 
         const int NUM_OF_ROWS = 8;
         const int NUM_OF_COLUMNS = 7;
+        public static int current_selected_number = 6;
 
         public HareAndTortoise_Form() {
             InitializeComponent();
@@ -41,6 +42,8 @@ namespace HareAndTortoise {
                 int row, column;
                 MapSquareToTable(i, out row, out column);
                 gameBoardPanel.Controls.Add(current_squarecontrol, column, row);
+
+                NumberOfPlayers.SelectedIndex = 4;
             }
         }
 
@@ -76,9 +79,9 @@ namespace HareAndTortoise {
         
         }//end SetUpGuiGameBoard()
 
-        private void updateSquare(bool update = true)
+        private void updateSquare(bool update = true, int number_of_players = HareAndTortoise_Game.numberOfPlayers)
         {
-            for (int i = 0; i < HareAndTortoise_Game.numberOfPlayers; i++)
+            for (int i = 0; i < number_of_players; i++)
             {
                 int current_location = HareAndTortoise_Game.Players[i].Location.GetNumber();
                 int row, column;
@@ -119,10 +122,47 @@ namespace HareAndTortoise {
 
         private void RollDice_Click(object sender, EventArgs e)
         {
-            updateSquare(false);
-            HareAndTortoise_Game.MovePlayers();
-            updateSquare();
+            Reset.Enabled = false;
+            RollDice.Enabled = false;
+            NumberOfPlayers.Enabled = false;
+            updateSquare(false, current_selected_number);
+            HareAndTortoise_Game.MovePlayers(current_selected_number);
+            if (HareAndTortoise_Game.isOver)
+            {
+                NumberOfPlayers.Enabled = true;
+            }
+            else
+            {
+                RollDice.Enabled = true;
+            }
+            updateSquare(true, current_selected_number);
             UpdateDataGridView();
+            Reset.Enabled = true;
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult response = MessageBox.Show("Do you really want to exit?", "Are you sure?", MessageBoxButtons.YesNo);
+            if (response == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            NumberOfPlayers.Enabled = true;
+            RollDice.Enabled = true;
+            updateSquare(false, current_selected_number);
+            current_selected_number = NumberOfPlayers.SelectedIndex + 2;
+            HareAndTortoise_Game.ResetPlayers(current_selected_number);
+            updateSquare(true, current_selected_number);
+            UpdateDataGridView();
+        }
+
+        private void NumberOfPlayers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //int index = NumberOfPlayers.SelectedIndex;
         } //end ResizeGameBoard
  
 

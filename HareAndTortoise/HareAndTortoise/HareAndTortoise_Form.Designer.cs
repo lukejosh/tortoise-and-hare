@@ -35,27 +35,27 @@
             this.NumberOfPlayers = new System.Windows.Forms.ComboBox();
             this.Players = new System.Windows.Forms.Label();
             this.HareAndTortoise = new System.Windows.Forms.Label();
-            this.playerBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.playerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.playerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.playerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.hareAndTortoiseGameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.playerTokenImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hasWonDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.playerBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.hareAndTortoiseGameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.playerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.playerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.playerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hareAndTortoiseGameBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hareAndTortoiseGameBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer
@@ -121,7 +121,7 @@
             this.hasWonDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.playerBindingSource4;
             this.dataGridView1.Location = new System.Drawing.Point(20, 148);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -148,6 +148,7 @@
             this.Reset.TabIndex = 7;
             this.Reset.Text = "Reset";
             this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // Exit
             // 
@@ -158,6 +159,7 @@
             this.Exit.TabIndex = 6;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // RollDice
             // 
@@ -195,6 +197,7 @@
             this.NumberOfPlayers.Name = "NumberOfPlayers";
             this.NumberOfPlayers.Size = new System.Drawing.Size(34, 21);
             this.NumberOfPlayers.TabIndex = 2;
+            this.NumberOfPlayers.SelectedIndexChanged += new System.EventHandler(this.NumberOfPlayers_SelectedIndexChanged);
             // 
             // Players
             // 
@@ -216,30 +219,6 @@
             this.HareAndTortoise.Size = new System.Drawing.Size(190, 26);
             this.HareAndTortoise.TabIndex = 0;
             this.HareAndTortoise.Text = "Hare and Tortoise";
-            // 
-            // playerBindingSource4
-            // 
-            this.playerBindingSource4.DataSource = typeof(Player_Class_Library.Player);
-            // 
-            // playerBindingSource3
-            // 
-            this.playerBindingSource3.DataSource = typeof(Player_Class_Library.Player);
-            // 
-            // playerBindingSource2
-            // 
-            this.playerBindingSource2.DataSource = typeof(Player_Class_Library.Player);
-            // 
-            // playerBindingSource
-            // 
-            this.playerBindingSource.DataSource = typeof(Player_Class_Library.Player);
-            // 
-            // playerBindingSource1
-            // 
-            this.playerBindingSource1.DataSource = typeof(Player_Class_Library.Player);
-            // 
-            // hareAndTortoiseGameBindingSource
-            // 
-            this.hareAndTortoiseGameBindingSource.DataSource = typeof(HareAndTortoise.HareAndTortoise_Game);
             // 
             // playerTokenImageDataGridViewImageColumn
             // 
@@ -273,6 +252,30 @@
             this.hasWonDataGridViewCheckBoxColumn.ReadOnly = true;
             this.hasWonDataGridViewCheckBoxColumn.Width = 50;
             // 
+            // playerBindingSource4
+            // 
+            this.playerBindingSource4.DataSource = typeof(Player_Class_Library.Player);
+            // 
+            // hareAndTortoiseGameBindingSource
+            // 
+            this.hareAndTortoiseGameBindingSource.DataSource = typeof(HareAndTortoise.HareAndTortoise_Game);
+            // 
+            // playerBindingSource3
+            // 
+            this.playerBindingSource3.DataSource = typeof(Player_Class_Library.Player);
+            // 
+            // playerBindingSource2
+            // 
+            this.playerBindingSource2.DataSource = typeof(Player_Class_Library.Player);
+            // 
+            // playerBindingSource
+            // 
+            this.playerBindingSource.DataSource = typeof(Player_Class_Library.Player);
+            // 
+            // playerBindingSource1
+            // 
+            this.playerBindingSource1.DataSource = typeof(Player_Class_Library.Player);
+            // 
             // HareAndTortoise_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,11 +292,11 @@
             this.splitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hareAndTortoiseGameBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hareAndTortoiseGameBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

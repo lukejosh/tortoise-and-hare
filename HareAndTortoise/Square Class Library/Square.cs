@@ -52,6 +52,7 @@ namespace Square_Class_Library
         public override void EffectOnPlayer(Player who)
         {
             who.Add(15);
+            who.Reroll(who);
         }
     }
 
@@ -66,6 +67,7 @@ namespace Square_Class_Library
         public override void EffectOnPlayer(Player who)
         {
             who.Deduct(25);
+            who.Move(who, -3);
         }
     }
 
@@ -85,10 +87,12 @@ namespace Square_Class_Library
             if (result == 1)
             {
                 who.Add(50);
+                who.Move(who, 5);
             }
             else
             {
                 who.Deduct(50);
+                who.Move(who, -5);
             }
 
         }
